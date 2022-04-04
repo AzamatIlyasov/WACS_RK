@@ -1,0 +1,1120 @@
+let options = [
+    "Agadyr_F/u220",
+    "Shymkent_F/u220",
+    "ATETS-3_F/u110",
+    "Alma_F/u220",
+    "Almaty_F/u220",
+    "Aspara_220_F",
+    "Avrora_F",
+    "Balkhashskaya_F/u110",
+    "Barabinskaya_F",
+    "Barnaul_F",
+    "CA-1_F",
+    "CGPP_F/u220",
+    "Cheliabinsk_F",
+    "EEC_F",
+    "EEC_F/u220",
+    "EGRES-1_F/u20",
+    "EGRES-1_F/u220",
+    "EGRES-2_F/u20",
+    "Frunze_F/u220",
+    "Glavnaya_220_F",
+    "IrGRES_F",
+    "Irtyshskaya_F",
+    "Kar.GRES-2_F/u110",
+    "Karazhal_220_F",
+    "Kemin_220_F",
+    "Kentau_F",
+    "Kokshetau_F",
+    "Kostanai_F",
+    "Koyan-Kos_220_F",
+    "Kozirevo_F",
+    "Kumkol_220_F/u110",
+    "Kurgan_F",
+    "Kyzylorda_220_F",
+    "MagnitRF_F",
+    "Medeo_220_F",
+    "Mirgalimsai_F",
+    "MoinakGES_220_F",
+    "Mointy_220_F",
+    "Nura_F/u220",
+    "Oskarovka-220_F",
+    "PS-EGPP_F",
+    "PS7-AHBK_F/u110",
+    "Robot_F",
+    "Ru-6_F",
+    "Rubtsovsk_F",
+    "Semey_F/u220",
+    "Shagol_F",
+    "Shilik_220_F",
+    "Shu_F/u220",
+    "Shymkentskaya_F",
+    "Sibir_F",
+    "Sistema-Ural_F",
+    "Sokol_F",
+    "Taldykorgan_F/u220",
+    "TashGRES_F",
+    "TashGRES_F/u220",
+    "Tashkent_F",
+    "Tavricheskaya_F",
+    "TrGRES_F",
+    "UKGRES_F/u220",
+    "UjUrGRES_F",
+    "Usti-Kamenogorsk_F/u220",
+    "VityazRF_F",
+    "VoshodRF_F",
+    "Zapadnaya_220_F",
+    "Zarya_F",
+    "ZhGRES_220_F",
+    "Zhambyl_F/u220",
+    "Zhanakorgan_F",
+    "Zhezkazgan_F/u220",
+    "Zhylga_220_F",
+    "pu_Almaty_Alma_F",
+    "pu_CGPP_EGRES-1_F",
+    "pu_CGPP_Oskarovka_F",
+    "pu_EEC_Semey_F",
+    "pu_EGRES-1_EEC_F",
+    "pu_EGRES-1_Oskarovka_F",
+    "pu_Frunze_Kemin_F",
+    "pu_GNPS_F",
+    "pu_Glavnaya_Frunze_F",
+    "pu_Glavnaya_Kemin_F",
+    "pu_KarGRES_Agadyr_F",
+    "pu_KarGRES_Balkhashskaya_F",
+    "pu_KarGRES_Karazhal_F",
+    "pu_KarGRES_Nura_F",
+    "pu_KarGRES_Oskarovka_F",
+    "pu_Kentau_Zhambyl_220_F",
+    "pu_Kyzylorda_Kumkol_F",
+    "pu_Mointy_UkGRES_F",
+    "pu_Ru-6_Kyzylorda_F",
+    "pu_Semey_U-K_F",
+    "pu_Shymkent_220_Zhylga_F",
+    "pu_Taldykorgan_Robot_F",
+    "pu_UkGRES_Shu_F",
+    "pu_ZhGRES_Frunze_F",
+    "pu_Zhambyl_Shymkent_F",
+    "pu_Zhezkazgan_Karazhal_F"
+
+
+];
+
+
+{
+    "0":{
+        "point":"Agadyr_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+    "1":{
+        "point":"Shymkent_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+    
+    "2":{
+        "point":"ATETS-3_F/u110",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/ATETS-3_F/u110/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/ATETS-3_F/u110/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/ATETS-3_F/u110/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/ATETS-3_F/u110/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "3":{
+        "point":"Alma_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Alma_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Alma_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Alma_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Alma_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "4":{
+        "point":"Almaty_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Almaty_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Almaty_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Almaty_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Almaty_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "5":{
+        "point":"Aspara_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Aspara_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Aspara_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Aspara_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Aspara_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "6":{
+        "point":"Avrora_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Avrora_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Avrora_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Avrora_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Avrora_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "7":{
+        "point":"Balkhashskaya_F/u110",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Balkhashskaya_F/u110/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Balkhashskaya_F/u110/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Balkhashskaya_F/u110/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Balkhashskaya_F/u110/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "8":{
+        "point":"Barabinskaya_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barabinskaya_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barabinskaya_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barabinskaya_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barabinskaya_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "9":{
+        "point":"Barnaul_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barnaul_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barnaul_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barnaul_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Barnaul_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "10":{
+        "point":"CA-1_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/CA-1_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/CA-1_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/CA-1_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/CA-1_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "11":{
+        "point":"CGPP_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/CGPP_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/CGPP_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/CGPP_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/CGPP_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "12":{
+        "point":"Cheliabinsk_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Cheliabinsk_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Cheliabinsk_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Cheliabinsk_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Cheliabinsk_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "13":{
+        "point":"EEC_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "14":{
+        "point":"EEC_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EEC_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "15":{
+        "point":"EGRES-1_F/u20",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u20/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u20/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u20/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u20/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "16":{
+        "point":"EGRES-1_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-1_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "17":{
+        "point":"EGRES-2_F/u20",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-2_F/u20/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-2_F/u20/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-2_F/u20/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/EGRES-2_F/u20/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "18":{
+        "point":"Frunze_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Frunze_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Frunze_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Frunze_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Frunze_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "19":{
+        "point":"Glavnaya_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Glavnaya_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Glavnaya_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Glavnaya_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Glavnaya_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "20":{
+        "point":"IrGRES_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/IrGRES_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/IrGRES_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/IrGRES_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/IrGRES_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "21":{
+        "point":"Irtyshskaya_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Irtyshskaya_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Irtyshskaya_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Irtyshskaya_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Irtyshskaya_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "22":{
+        "point":"Kar.GRES-2_F/u110",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kar.GRES-2_F/u110/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kar.GRES-2_F/u110/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kar.GRES-2_F/u110/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kar.GRES-2_F/u110/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "23":{
+        "point":"Karazhal_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Karazhal_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Karazhal_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Karazhal_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Karazhal_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "24":{
+        "point":"Kemin_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kemin_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kemin_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kemin_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kemin_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "25":{
+        "point":"Kentau_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kentau_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kentau_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kentau_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kentau_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "26":{
+        "point":"Kokshetau_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kokshetau_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kokshetau_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kokshetau_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kokshetau_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "27":{
+        "point":"Kostanai_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kostanai_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kostanai_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kostanai_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kostanai_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "28":{
+        "point":"Koyan-Kos_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Koyan-Kos_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Koyan-Kos_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Koyan-Kos_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Koyan-Kos_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "29":{
+        "point":"Kozirevo_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kozirevo_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kozirevo_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kozirevo_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kozirevo_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "30":{
+        "point":"Kumkol_220_F/u110",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kumkol_220_F/u110/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kumkol_220_F/u110/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kumkol_220_F/u110/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kumkol_220_F/u110/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "31":{
+        "point":"Kurgan_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kurgan_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kurgan_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kurgan_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kurgan_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "32":{
+        "point":"Kyzylorda_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kyzylorda_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kyzylorda_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kyzylorda_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Kyzylorda_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "33":{
+        "point":"MagnitRF_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/MagnitRF_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/MagnitRF_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/MagnitRF_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/MagnitRF_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "34":{
+        "point":"Medeo_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Medeo_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Medeo_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Medeo_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Medeo_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "35":{
+        "point":"Mirgalimsai_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mirgalimsai_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mirgalimsai_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mirgalimsai_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mirgalimsai_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "36":{
+        "point":"MoinakGES_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/MoinakGES_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/MoinakGES_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/MoinakGES_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/MoinakGES_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "37":{
+        "point":"Mointy_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mointy_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mointy_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mointy_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Mointy_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "38":{
+        "point":"Nura_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Nura_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Nura_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Nura_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Nura_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "39":{
+        "point":"Oskarovka-220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Oskarovka-220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Oskarovka-220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Oskarovka-220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Oskarovka-220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "40":{
+        "point":"PS-EGPP_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS-EGPP_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS-EGPP_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS-EGPP_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS-EGPP_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+            
+
+        ]
+    },
+
+    "41":{
+        "point":"PS7-AHBK_F/u110",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS7-AHBK_F/u110/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS7-AHBK_F/u110/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS7-AHBK_F/u110/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/PS7-AHBK_F/u110/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "42":{
+        "point":"Robot_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Robot_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Robot_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Robot_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Robot_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "43":{
+        "point":"Ru-6_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Ru-6_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Ru-6_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Ru-6_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Ru-6_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "44":{
+        "point":"Rubtsovsk_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Rubtsovsk_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Rubtsovsk_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Rubtsovsk_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Rubtsovsk_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "45":{
+        "point":"Semey_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Semey_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Semey_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Semey_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Semey_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "46":{
+        "point":"Shagol_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shagol_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shagol_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shagol_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shagol_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "47":{
+        "point":"Shilik_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shilik_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shilik_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shilik_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shilik_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "48":{
+        "point":"Shu_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shu_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shu_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shu_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shu_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "49":{
+        "point":"Shymkentskaya_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkentskaya_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkentskaya_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkentskaya_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkentskaya_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "50":{
+        "point":"Sibir_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sibir_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sibir_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sibir_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sibir_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "51":{
+        "point":"Sistema-Ural_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sistema-Ural_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sistema-Ural_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sistema-Ural_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sistema-Ural_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "52":{
+        "point":"Sokol_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sokol_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sokol_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sokol_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Sokol_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "53":{
+        "point":"Taldykorgan_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Taldykorgan_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Taldykorgan_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Taldykorgan_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Taldykorgan_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "54":{
+        "point":"TashGRES_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "55":{
+        "point":"TashGRES_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TashGRES_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "56":{
+        "point":"Tashkent_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tashkent_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tashkent_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tashkent_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tashkent_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "57":{
+        "point":"Tavricheskaya_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tavricheskaya_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tavricheskaya_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tavricheskaya_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Tavricheskaya_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "58":{
+        "point":"TrGRES_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/TrGRES_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TrGRES_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TrGRES_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/TrGRES_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "59":{
+        "point":"UKGRES_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/UKGRES_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/UKGRES_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/UKGRES_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/UKGRES_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "60":{
+        "point":"UjUrGRES_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/UjUrGRES_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/UjUrGRES_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/UjUrGRES_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/UjUrGRES_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "61":{
+        "point":"Usti-Kamenogorsk_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Usti-Kamenogorsk_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Usti-Kamenogorsk_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Usti-Kamenogorsk_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Usti-Kamenogorsk_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "62":{
+        "point":"VityazRF_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/VityazRF_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/VityazRF_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/VityazRF_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/VityazRF_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "63":{
+        "point":"VoshodRF_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/VoshodRF_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/VoshodRF_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/VoshodRF_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/VoshodRF_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "64":{
+        "point":"Zapadnaya_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zapadnaya_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zapadnaya_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zapadnaya_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zapadnaya_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "65":{
+        "point":"Zarya_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zarya_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zarya_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zarya_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zarya_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "66":{
+        "point":"ZhGRES_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/ZhGRES_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/ZhGRES_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/ZhGRES_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/ZhGRES_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "67":{
+        "point":"Zhambyl_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhambyl_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhambyl_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhambyl_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhambyl_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "68":{
+        "point":"Zhanakorgan_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhanakorgan_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhanakorgan_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhanakorgan_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhanakorgan_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "69":{
+        "point":"Zhezkazgan_F/u220",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhezkazgan_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhezkazgan_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhezkazgan_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhezkazgan_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "70":{
+        "point":"Zhylga_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhylga_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhylga_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhylga_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Zhylga_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "71":{
+        "point":"pu_Almaty_Alma_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Almaty_Alma_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Almaty_Alma_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Almaty_Alma_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Almaty_Alma_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "72":{
+        "point":"pu_CGPP_EGRES-1_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_EGRES-1_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_EGRES-1_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_EGRES-1_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_EGRES-1_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "73":{
+        "point":"pu_CGPP_Oskarovka_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_Oskarovka_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_Oskarovka_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_Oskarovka_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_CGPP_Oskarovka_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "74":{
+        "point":"pu_EEC_Semey_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EEC_Semey_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EEC_Semey_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EEC_Semey_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EEC_Semey_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "75":{
+        "point":"pu_EGRES-1_EEC_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_EEC_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_EEC_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_EEC_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_EEC_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "76":{
+        "point":"pu_EGRES-1_Oskarovka_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_Oskarovka_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_Oskarovka_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_Oskarovka_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_EGRES-1_Oskarovka_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "77":{
+        "point":"pu_Frunze_Kemin_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Frunze_Kemin_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Frunze_Kemin_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Frunze_Kemin_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Frunze_Kemin_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "78":{
+        "point":"pu_GNPS_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_GNPS_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_GNPS_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_GNPS_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_GNPS_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "79":{
+        "point":"pu_Glavnaya_Frunze_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Frunze_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Frunze_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Frunze_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Frunze_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "80":{
+        "point":"pu_Glavnaya_Kemin_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Kemin_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Kemin_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Kemin_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Glavnaya_Kemin_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "81":{
+        "point":"pu_KarGRES_Agadyr_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Agadyr_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Agadyr_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Agadyr_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Agadyr_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "82":{
+        "point":"pu_KarGRES_Balkhashskaya_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Balkhashskaya_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Balkhashskaya_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Balkhashskaya_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Balkhashskaya_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "83":{
+        "point":"pu_KarGRES_Karazhal_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Karazhal_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Karazhal_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Karazhal_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Karazhal_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "84":{
+        "point":"pu_KarGRES_Nura_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Nura_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Nura_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Nura_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Nura_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "85":{
+        "point":"pu_KarGRES_Oskarovka_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Oskarovka_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Oskarovka_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Oskarovka_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_KarGRES_Oskarovka_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "86":{
+        "point":"pu_Kentau_Zhambyl_220_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kentau_Zhambyl_220_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kentau_Zhambyl_220_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kentau_Zhambyl_220_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kentau_Zhambyl_220_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "87":{
+        "point":"pu_Kyzylorda_Kumkol_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kyzylorda_Kumkol_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kyzylorda_Kumkol_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kyzylorda_Kumkol_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Kyzylorda_Kumkol_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "88":{
+        "point":"pu_Mointy_UkGRES_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Mointy_UkGRES_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Mointy_UkGRES_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Mointy_UkGRES_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Mointy_UkGRES_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "89":{
+        "point":"pu_Ru-6_Kyzylorda_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Ru-6_Kyzylorda_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Ru-6_Kyzylorda_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Ru-6_Kyzylorda_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Ru-6_Kyzylorda_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "90":{
+        "point":"pu_Semey_U-K_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Semey_U-K_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Semey_U-K_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Semey_U-K_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Semey_U-K_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "91":{
+        "point":"pu_Shymkent_220_Zhylga_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Shymkent_220_Zhylga_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Shymkent_220_Zhylga_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Shymkent_220_Zhylga_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Shymkent_220_Zhylga_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "92":{
+        "point":"pu_Taldykorgan_Robot_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Taldykorgan_Robot_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Taldykorgan_Robot_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Taldykorgan_Robot_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Taldykorgan_Robot_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "93":{
+        "point":"pu_UkGRES_Shu_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_UkGRES_Shu_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_UkGRES_Shu_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_UkGRES_Shu_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_UkGRES_Shu_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "94":{
+        "point":"pu_ZhGRES_Frunze_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_ZhGRES_Frunze_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_ZhGRES_Frunze_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_ZhGRES_Frunze_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_ZhGRES_Frunze_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+
+    "95":{
+        "point":"pu_Zhambyl_Shymkent_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhambyl_Shymkent_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhambyl_Shymkent_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhambyl_Shymkent_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhambyl_Shymkent_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    },
+
+    "96":{
+        "point":"pu_Zhezkazgan_Karazhal_F",
+        "ts":[
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhezkazgan_Karazhal_F/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhezkazgan_Karazhal_F/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhezkazgan_Karazhal_F/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/pu_Zhezkazgan_Karazhal_F/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+        ]
+    }
+    //
+}
