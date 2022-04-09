@@ -11,8 +11,8 @@ function(VARS, element, context) {
     // Functions to find MeanSquareError
     let MSE = function (fact, predict) {
         let valueArray = fact.map(
-            function (v, i) {
-                return Math.pow((v - predict[i]), 2);
+            function (v, index) {
+                return Math.pow((v - predict[index]), 2);
             });
         return (valueArray.reduce((a, x) => (a + x), 0)) / valueArray.length;
     };
@@ -50,7 +50,7 @@ function(VARS, element, context) {
             function (v, index) {
                 return Math.abs(v - predict[index])/v;
             });
-        return 100 - ( valueArray.reduce((acc, value) => (acc + value)) / valueArray.length * 100 );
+        return 100 - Math.abs( (valueArray.reduce((acc, value) => (acc + value)) / valueArray.length) * 100 );
     };
 
     // Functions to find std
@@ -73,11 +73,11 @@ function(VARS, element, context) {
     // Prepare array of parameter with numbers
     let fact = ds.map((value) => {
         //return value.p_load_fact_smooth;
-        return value.FACT_P_L;
+        return Math.round(value.FACT_P_L);
     });
     let predict = ds.map((value) => {
         //return value.predict_p_load;
-        return value.PRED_P_L;
+        return Math.round(value.PRED_P_L);
     });
 
     let date = ds.map((value) => {
@@ -97,14 +97,14 @@ function(VARS, element, context) {
 
     value.factMean = Math.round(arrayMean(fact));
     value.predictMean = Math.round(arrayMean(predict));
-    // value.factStandDev = standDev(p_fact, value.factMean);
+    // value.factStandDev = Math.round(standDev(fact));
     value.predictStandDev = Math.round(standDev(predict));
-    value.date = date[0];
+    //value.date = date[0];
     
-    console.log('DEBUG:calculationP:date ' + date);
+    //console.log('DEBUG:calculationP:date ' + parseInt(date));
     console.log('DEBUG:calculationP:fact ' + fact);
     console.log('DEBUG:calculationP:predict ' + predict);
-    console.log('DEBUG:calculationP:value.maep ' + value.maep);
+    console.log('DEBUG:calculationP:value.mape ' + value.mape);
     
   return [value];
 }
