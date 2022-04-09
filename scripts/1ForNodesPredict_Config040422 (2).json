@@ -107,8 +107,12 @@ let options = [
         "ts":[
             {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
             {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+
             {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
-            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"},
+
+            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/archivesP/temperature","name": "FACT_T","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Agadyr_F/u220/futureP/forecast_temperature","name": "PRED_T","aggregate": "mean"},
         ]
     },
     "1":{
@@ -116,8 +120,12 @@ let options = [
         "ts":[
             {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/archivesS/p_load_sc","name": "FACT_P_L","aggregate": "mean"},
             {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/futureP/predict_p_load_sc","name": "PRED_P_L","aggregate": "mean"},
+
             {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/archivesS/q_load_sc","name": "FACT_Q_L","aggregate": "mean"},
-            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"}
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/futureP/predict_q_load_sc","name": "PRED_Q_L","aggregate": "mean"},
+
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/archivesP/temperature","name": "FACT_T","aggregate": "mean"},
+            {"archive":"/root/PROJECT/TAGS/Nodes/Shymkent_F/u220/futureP/forecast_temperature","name": "FACT_T","aggregate": "mean"},
         ]
     },
     
