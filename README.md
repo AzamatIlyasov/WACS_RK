@@ -80,3 +80,11 @@
     docker-compose up -d
 
 
+docker ps
+docker ps -a 
+ls
+
+docker stop #addNameContainer
+
+service/operator-service
+service/prophet-service
