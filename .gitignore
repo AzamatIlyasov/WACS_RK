@@ -1,9 +1,2 @@
-python.idea/
-.vscode/
-__pycache__/
-*.tar.gz
-*.tar
-/model
-.venv
-logs
-.env
+
+cfg/Server3_33/operator-service.tar
