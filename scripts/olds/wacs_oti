@@ -1,0 +1,389 @@
+%%-----------------------------------------------------------------
+%% This script is executed at server side. The programming language
+%% is Erlang.
+%% The module must export method "on_event/1" or "on_event/2" . 
+%% The on_event/2 should be used if your code needs to keep some state between
+%% calls.
+%%
+%% The callback "on_event" is called by the faceplate only in run-time. 
+%% As the trigger might be used timer and/or change of the value of some field 
+%% of the tag.
+%% If the event is triggered by the timer then the first argument of the on_event 
+%% callback will be:
+%%    {on_cycle,Cycle} - Cycle is period (ms).
+%% If the event is triggered by the change of the value of the linked tag field 
+%% then the first argument of the on_event will be:
+%%    {tag,TagID,Field,Value} - TagID - OID of the tag
+%%                              Field - name of the field
+%%                              Value - current value of the field. 
+%% The returned value is considered being state and passed as the second argument
+%% at the next call.
+%%-----------------------------------------------------------------
+
+-module(wacs_oti).
+
+-include("fp_struct.hrl").
+
+-export([on_event/2]).
+
+-export([
+    selU/5, 
+    selU/7, 
+    sum_for_oti/2,
+    selVal/2,
+    selVal/3,
+    ots_vl/2
+]).
+
+on_event(_vent, State)->
+   % DUMMY
+   State.
+   
+
+
+selU(Path, Val1in, Qds1in, Val2in, Qds2in) ->
+    % %fp:log(info, "DEBUG: test_wacs_oti_selV for ~p : val1:~p, qds1:~p , val2:~p, qds2:~p",[fp_db:to_path(Path), Val1,Qds1,Val2,Qds2]),
+    % {Value, Qds} = {Val1, Qds1}, %%% временно!!!!
+    Val1 = 
+        case Val1in of 
+            none -> 0;
+            -1 -> 0.1;
+            _ -> Val1in
+        end,
+    Val2 = 
+        case Val2in of 
+            none -> 0;
+            -1 -> 0.1;
+            _ -> Val2in
+        end,
+    Qds1 = 
+        case Qds1in of 
+            none -> 0;
+            -1 -> 16;
+            _ -> Qds1in
+        end,
+    Qds2 = 
+        case Qds2in of 
+            none -> 0;
+            -1 -> 16;
+            _ -> Qds2in
+        end,
+    if 
+        Val1 =:= none -> %fp:log(info, "v1n",[]),
+            Value = Val2,
+            Qds = Qds2;
+        Val2 =:= none -> %fp:log(info, "v2n",[]),
+            Value = Val1, 
+            Qds = Qds1;
+        Val1 < 0 -> %fp:log(info, "v1p",[]),
+            Value = Val2, 
+            Qds = Qds2;
+        Val2 < 0 -> %fp:log(info, "v2p",[]),
+            Value = Val1, 
+            Qds = Qds1;
+        Val1 > Val2 -> %fp:log(info, "v1g",[]),
+            Value = Val1, 
+            Qds = Qds1;
+        Val2 > Val1 -> %fp:log(info, "v2g",[]),
+            Value = Val2, 
+            Qds = Qds2;
+        Val2 =:= Val1 ->%fp:log(info, "v12e",[]),
+            Value = Val2, 
+            Qds = Qds2;
+        true -> %fp:log(info, "tr",[]),
+            Value = -0.8, 
+            Qds = 32
+    end,
+        
+    %fp:log(info, "DEBUG: selU END for ~p : selVal:~p, selQds:~p",[Path, Value,Qds]),
+    % Value = Val1, 
+    % Qds = 0,
+    {Value, Qds}.
+
+
+selU(Path, Val1in, Qds1in, Val2in, Qds2in, Val3in, Qds3in) ->
+    %fp:log(info, "DEBUG: test_wacs_oti_selV for ~p : val1:~p, qds1:~p , val2:~p, qds2:~p",[Path, Val1,Qds1,Val2,Qds2]),
+    %  {Value, Qds} = {Val1, Qds1}, %%% временно!!!!
+    Val1 = 
+        case Val1in of 
+            none -> 0;
+            -1 -> 0.1;
+            _ -> Val1in
+        end,
+    Val2 = 
+        case Val2in of 
+            none -> 0;
+            -1 -> 0.1;
+            _ -> Val2in
+        end,
+    Val3 = 
+        case Val3in of 
+            none -> 0;
+            -1 -> 0.1;
+            _ -> Val3in
+        end,
+    Qds1 = 
+        case Qds1in of 
+            none -> 0;
+            -1 -> 16;
+            _ -> Qds1in
+        end,
+    Qds2 = 
+        case Qds2in of 
+            none -> 0;
+            -1 -> 16;
+            _ -> Qds2in
+        end,
+    Qds3 = 
+        case Qds3in of 
+            none -> 0;
+            -1 -> 16;
+            _ -> Qds3in
+        end,
+    if 
+        Val1 =:= none -> %fp:log(info, "v1n",[]),
+            Value = Val2,
+            Qds = Qds2;
+        Val2 =:= none -> %fp:log(info, "v2n",[]),
+            Value = Val1, 
+            Qds = Qds1;
+        Val1 < 0 -> %fp:log(info, "v1p",[]),
+            Value = Val2, 
+            Qds = Qds2;
+        Val2 < 0 -> %fp:log(info, "v2p",[]),
+            Value = Val1, 
+            Qds = Qds1;
+        Val1 > Val2 -> %fp:log(info, "v1g",[]),
+            Value = Val1, 
+            Qds = Qds1;
+        Val2 > Val1 -> %fp:log(info, "v2g",[]),
+            Value = Val2, 
+            Qds = Qds2;
+        Val2 =:= Val1 ->%fp:log(info, "v12e",[]),
+            Value = Val2, 
+            Qds = Qds2;
+        Val3 > Val2 -> %fp:log(info, "v3g",[]),
+            Value = Val3, 
+            Qds = Qds3;
+        Val3 =:= Val2 -> %fp:log(info, "v3g",[]),
+            Value = Val3, 
+            Qds = Qds3;
+        true -> %fp:log(info, "tr",[]),
+            Value = -0.9, 
+            Qds = 32
+    end,
+        
+    %fp:log(info, "DEBUG: selU END for ~p : selVal:~p, selQds:~p",[Path, Value,Qds]),
+    % Value = Val1, 
+    % Qds = 0,
+    {Value, Qds}.
+
+
+%% for select one of two elements
+selVal(Path, Elements) ->
+    %fp:log(info,"DEBUG: SUM_OTI for ~p el:~p ", [Path, Elements]),
+    % {Result, Result_qds} = 
+    %     case Elements of
+    %         [ {SV,SVqds} ] -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1"),
+    %             {SV,SVqds};
+    %         [ {SV,SVqds}, {WSV,WSVqds} ]  -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1 _v2"),
+    %             {SV,SVqds}; %Выбрали SCADA - поменять на WAMS%%%%%%%%%%%%%%%%%%%%%%%
+    %             % {WSV,WSVqds}; %wams - выбрал 
+    %         [ {SV,SVqds}, {WSV,WSVqds},{SV2,SV2qds} ]  -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1 _v2 _v3"),
+    %             {SV,SVqds}; %Выбрали SCADA - поменять на WAMS%%%%%%%%%%%%%%%%%%%%%%%
+    %             % {WSV,WSVqds}; %wams - выбрал 
+    %         [ {SV,SVqds}, {WSV,WSVqds},{SV2,SV2qds},{SV3,SV3qds} ]  -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1 _v2 _v3 _v4"),
+    %             {SV,SVqds} %Выбрали SCADA - поменять на WAMS%%%%%%%%%%%%%%%%%%%%%%%
+    %             % {WSV,WSVqds} %wams - выбрал 
+    %     end,   
+    %fp:log(info,"DEBUG: OTI selVal v1 ~p v1s ~p ", [Result, Result_qds]),
+    selVal(Path, Elements, 0,0).
+    %{Result, Result_qds}.
+
+selVal(_, [], Acc1,Acc1s) -> 
+    %{Acc1,Acc1s} = Acc,
+    %fp:log(info,"DEBUG: 4 SEL_VAL END Acc1 ~p Acc1s ~p", [Acc1,Acc1s]),
+    Acc={Acc1,Acc1s},
+    case Acc of 
+        {0,0} -> 
+            %fp:log(info,"DEBUG: 4 1 SEL_VAL END NN"), 
+            Res=0,Rs=0;
+        {0,-1} -> 
+            %fp:log(info,"DEBUG: 4 1 SEL_VAL END N-1"), 
+            Res=0,Rs=48;
+        {-1,-1} -> 
+            %fp:log(info,"DEBUG: 4 1 SEL_VAL END -1-1"), 
+            Res=0,Rs=48;
+        {_,-1} -> 
+            %fp:log(info,"DEBUG: 4 1 SEL_VAL END V-1"), 
+            Res=0,Rs=48;
+        {0,_}-> 
+            %fp:log(info,"DEBUG: 4 2 SEL_VAL END NV"),     
+            Res=0,Rs=0;
+        %{Res,0}->  fp:log(info,"DEBUG: 4 3 SEL_VAL END VN"),        Rs=48;
+        {Res,Rs}-> {Res,Rs}%fp:log(info,"DEBUG: 4 4 SEL_VAL END VV")
+    end,
+    %fp:log(info,"DEBUG: 5 SEL_VAL END END - Res ~p Rs ~p", [Res,Rs]),
+    {Res,Rs};
+selVal(_, Elements, Acc1,Acc1s) ->
+    %fp:log(info,"DEBUG: 2 SEL_VAL begin in - Vals ~p ", [Elements]),
+    [Vals|Rest] = Elements,
+    %{V,Vs} = Vals,
+    %Acc = {Acc1,Acc1s},
+    %fp:log(info,"DEBUG: 3 SEL_VAL begin in - ~p , Rest ~p , Acc1 ~p , Acc1s ~p", [Vals, Rest, Acc1,Acc1s]),
+    case Vals of 
+        {none, none} -> 
+            %fp:log(info,"DEBUG: 3 1 SEL_VAL NN"), 
+            selVal([], Rest, 0, 0);
+        {none, Vs} ->    
+            %fp:log(info,"DEBUG: 3 2 SEL_VAL NV"), 
+            selVal([], Rest, 0, Vs);
+        {V, none} ->    
+            %fp:log(info,"DEBUG: 3 3 SEL_VAL VN"), 
+            selVal([], Rest, V, 0);
+        {V, -1} ->       
+            %fp:log(info,"DEBUG: 3 4 SEL_VAL V-1"), 
+            selVal([], Rest, V, 16);
+        {V, 0} ->       
+            %fp:log(info,"DEBUG: 3 4 SEL_VAL V0"), 
+            selVal([], Rest, V, 0);
+        {V, Vs} ->       
+            %fp:log(info,"DEBUG: 3 5 SEL_VAL V_"), 
+            selVal([], Rest, V, Vs)
+    end.
+
+
+
+
+%% forReactors
+selVal(Path, IsManual, Elements) ->
+    %fp:log(info,"DEBUG: SUM_OTI for ~p el:~p ", [?PATH(Path), Elements]),
+    %fp:log(info,"DEBUG: OTI selVal_RRR _Manual ~p  _EL ~p", [IsManual, Elements]),
+    {SV,SVqds} = Elements,
+    Result = 
+        case SV of 
+            none -> 0;
+            -1 -> 0;
+            _ -> SV
+        end,
+    Result_qds = 
+            case SVqds of 
+                none -> 16;
+                -1 -> 16;
+                _ -> SVqds
+            end,
+    %fp:log(info,"DEBUG: OTI selVal_RRR _Result ~p ~p", [Result,Result_qds]),    
+    MapManual = #{},
+    MapAuto = #{"res" => Result, "res_status" => Result_qds },
+    ValuesMap = 
+        case IsManual of 
+            false -> MapAuto;
+            true ->  MapManual;
+            _ -> MapAuto
+        end,
+    %fp:log(info,"DEBUG: OTI selVal_RRR _VMap ~p", [ValuesMap]),   
+    ValuesMap. 
+ 
+ 
+    
+%% for sum of elemetns
+sum_for_oti(Path, Elements) -> 
+    %%fp:log(info,"DEBUG: 1 SUM_OTI BEGIN ~p el:~p ", [Path, Elements]),
+    % {Result, Result_qds} =     
+    %     case Elements of %временно!!!!!!!!!!
+    %         [ {SV,SVqds} ] -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1"),
+    %             {SV,SVqds};
+    %         [ {SV,SVqds}, {WSV,WSVqds} ]  -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1 _v2"),
+    %             {SV,SVqds}; %Выбрали SCADA - поменять на WAMS%%%%%%%%%%%%%%%%%%%%%%%
+    %         [ {SV,SVqds},{_,_},{_,_} ]  -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1 _v2 _v3"),
+    %             {SV,SVqds};
+    %         [ {SV,SVqds},{_,_},{_,_},{_,_} ]  -> 
+    %             %fp:log(info,"DEBUG: OTI selVal _v1 _v2 _v3 _v4"),
+    %             {SV,SVqds}
+    %         end,   
+    % %%fp:log(info,"DEBUG: OTI selVal v1 ~p v1s ~p ", [Result, Result_qds]),
+    % {Result, Result_qds}.
+    sum_for_oti(Path, Elements, {0,0}).
+
+sum_for_oti(_, [], {Acc1,Acc1s}) -> 
+    %{Acc1,Acc1s} = Acc,
+    %fp:log(info,"DEBUG: 4 SUM_OTI END Acc1 ~p Acc1s ~p", [Acc1,Acc1s]),
+    Acc={Acc1,Acc1s},
+    case Acc of 
+        {0,0} -> 
+            %fp:log(info,"DEBUG: 4 1 SUM_OTI END NN"), 
+            Res=0,Rs=0;
+        {0,-1} -> 
+            %fp:log(info,"DEBUG: 4 1 SUM_OTI END N-1"), 
+            Res=0,Rs=48;
+        {-1,-1} -> 
+            %fp:log(info,"DEBUG: 4 1 SUM_OTI END -1-1"), 
+            Res=0,Rs=48;
+        {_,-1} -> 
+            %fp:log(info,"DEBUG: 4 1 SEL_VAL END V-1"), 
+            Res=0,Rs=48;
+        {0,_}-> 
+            %fp:log(info,"DEBUG: 4 2 SUM_OTI END NV"),     
+            Res=0,Rs=0;
+        %{Res,0}->  fp:log(info,"DEBUG: 4 3 SUM_OTI END VN"),        Rs=48;
+        {Res,Rs}-> {Res,Rs}%fp:log(info,"DEBUG: 4 4 SUM_OTI END VV")
+    end,
+    %fp:log(info,"DEBUG: 5 SUM_OTI END END - Res ~p Rs ~p", [Res,Rs]),
+    {Res,Rs};
+sum_for_oti(_, Elements, {Acc1,Acc1s}) ->
+    %fp:log(info,"DEBUG: 2 SUM_OTI begin in - Vals ~p ", [Elements]),
+    [Vals|Rest] = Elements,
+    %{V,Vs} = Vals,
+    %Acc = {Acc1,Acc1s},
+    %fp:log(info,"DEBUG: 3 SUM_OTI begin in - ~p , Rest ~p , Acc1 ~p , Acc1s ~p", [Vals, Rest, Acc1,Acc1s]),
+    case Vals of 
+        {none, none} -> 
+            %fp:log(info,"DEBUG: 3 1 SUM_OTI NN"), 
+            sum_for_oti([], Rest, {0, 0});
+        {none, Vs} ->    
+            %fp:log(info,"DEBUG: 3 2 SUM_OTI NV"), 
+            sum_for_oti([], Rest, {0, Vs});
+        {V, none} ->    
+            %fp:log(info,"DEBUG: 3 3 SUM_OTI VN"), 
+            sum_for_oti([], Rest, {0+Acc1, 0});
+        {V, -1} ->       
+            %fp:log(info,"DEBUG: 3 4 SUM_OTI V-1"), 
+            sum_for_oti([], Rest, {V+Acc1, 0});
+        {V, 0} ->       
+            %fp:log(info,"DEBUG: 3 4 SUM_OTI V0"), 
+            sum_for_oti([], Rest, {V+Acc1, 0});
+        {V, Vs} ->       
+            %fp:log(info,"DEBUG: 3 5 SUM_OTI V_"), 
+            sum_for_oti([], Rest, {V+Acc1, Vs})
+    end.
+
+
+
+
+%% for ots for two vl or great
+state_vl(Path, Elements) ->
+    %fp:log(info,"DEBUG: SUM_OTI for ~p el:~p ", [Path, Elements]),
+    Result = 0,
+    Result_qds = 16,
+    {Result, Result_qds}.
+    
+    
+    
+    
+    
+ 
+ 
+%% for ots from two susbstaions
+ots_vl(Path, Elements) -> 
+    %fp:log(info,"DEBUG: OTS for ~p el:~p ", [Path, Elements]),
+    Result = 0,
+    Result_qds = 16,
+    {Result, Result_qds}.
+    
